@@ -280,7 +280,9 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 @media only screen and (max-width:720px) {
 	.store_wrap .inner {gap:40px;}
 	.telecom_group {flex-direction:column; align-items:center; gap:20px;}
-	.telecom_group .telecom_item {width:240px;}
+	.telecom_group .telecom_item {width:240px; border-radius:6px;}
+	.telecom_group .telecom_item div.tit {padding:5px 0;}
+	.telecom_group .telecom_item div.tit strong {font-size:14px; line-height:20px;}
 	.telecom_group .telecom_item .btn_group {padding:20px 0;}
 	.telecom_group .telecom_item .btn_group button {width:152px; height:48px;}
 }
@@ -292,7 +294,7 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 .unaccount_wrap {width:88.88888vw; max-width:786px; margin:0 auto; padding:60px 0 76px;}
 .unaccount_wrap div.tit {padding-bottom:8px; border-bottom:2px solid #000;}
 .unaccount_wrap div.tit strong {display:inline-block; font-size:24px; line-height:1.5em;}
-.unaccount_wrap .telecoms div.row {display:flex; align-items:center; width:100%; padding:18px 0; gap:18px; border-bottom:1px solid #ddd;}
+.unaccount_wrap .telecoms div.row {display:flex; align-items:flex-start; width:100%; padding:36px 0 12px; gap:18px; border-bottom:1px solid #ddd;}
 .unaccount_wrap .telecoms div.row strong {display:inline-block; min-width:70px; font-size:14px; line-height:1.28571em;}
 .unaccount_wrap .telecoms div.row div.check_wrap label {display:inline-block; position:relative; padding-left:2em; font-size:14px;}
 .unaccount_wrap .telecoms div.row div.check_wrap label + label {margin-left:12px;}
@@ -305,13 +307,13 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 .unaccount_wrap .telecoms div.row div.check_wrap label input:checked ~ span.txt {color:#000;}
 .unaccount_wrap .telecoms p.txt {margin-top:0.66666em; font-size:0.75em; color:#888;}
 
-.unaccount_wrap .phonenumber_wrap div.item {display:flex; justify-content:space-between; align-items:center; position:relative; width:100%; padding:20px 0; border-bottom:1px solid #ddd;}
+.unaccount_wrap .phonenumber_wrap div.item {display:flex; justify-content:space-between; align-items:center; position:relative; width:100%; padding:36px 0 12px; border-bottom:1px solid #ddd;}
 .unaccount_wrap .phonenumber_wrap strong.tit {display:inline-block; min-width:70px; font-size:14px; white-space:nowrap;}
 .unaccount_wrap .phonenumber_wrap .ipt_set {flex:1; position:relative;}
 .unaccount_wrap .phonenumber_wrap .ipt_set input {width:100%; height:36px; padding:0 1em; border:0 none; background-color:#fff; font-size:14px;}
 .unaccount_wrap .phonenumber_wrap .ipt_set input::placeholder {font-size:10px; letter-spacing:-0.05em;}
 .unaccount_wrap .phonenumber_wrap .ipt_set span.timer {position:absolute; top:50%; right:0; transform:translateY(-50%); color:#ff0000; font-size:10px; line-height:24px;}
-.unaccount_wrap .phonenumber_wrap button {width:68px; height:36px; margin-left:12px; background-color:#333; border-radius:5px;}
+.unaccount_wrap .phonenumber_wrap button {width:68px; height:36px; margin-left:12px; background-color:#333; border-radius:2px;}
 .unaccount_wrap .phonenumber_wrap button span {display:block; color:#fff; font-size:12px;}
 .unaccount_wrap .phonenumber_wrap button:disabled {background-color:#ddd;}
 .unaccount_wrap .phonenumber_wrap button:disabled span {color:#888;}
@@ -322,7 +324,7 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 .unaccount_wrap > div.btn button {width:320px; height:48px; background-color:#333;}
 .unaccount_wrap > div.btn button strong {color:#fff; font-size:14px;}
 
-.unaccount_wrap .guide_txt {font-size:0.75em;}
+.unaccount_wrap .guide_txt {margin-top:24px; font-size:0.75em;}
 .unaccount_wrap .guide_txt p + p {margin-top:6px;}
 .unaccount_wrap .guide_txt p.em {color:#ff0000; line-height:1.66666em;}
 .unaccount_wrap .guide_txt p.txt {color:#888; line-height:1.55555em;}
@@ -331,15 +333,16 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 	.unaccount_wrap {padding:92px 0 118px;}
 	.unaccount_wrap div.tit {border-bottom-width:3px;}
 	.unaccount_wrap div.tit strong {font-size:40px;}
+	.unaccount_wrap .phonenumber_wrap div.item {padding:20px 0;}
 	.unaccount_wrap .phonenumber_wrap strong.tit {width:118px; min-width:118px; font-size:20px; line-height:1.2em;}
 	.unaccount_wrap .phonenumber_wrap .ipt_set input {height:72px; font-size:20px;}
-	.unaccount_wrap .phonenumber_wrap .ipt_set input::placeholder {font-size:inherit}
+	.unaccount_wrap .phonenumber_wrap .ipt_set input::placeholder {font-size:inherit;}
 	.unaccount_wrap .phonenumber_wrap .ipt_set span.timer {font-size:18px;}
-	.unaccount_wrap .phonenumber_wrap button {width:180px; height:72px; margin-left:36px;}
+	.unaccount_wrap .phonenumber_wrap button {width:180px; height:72px; margin-left:36px; border-radius:5px;}
 	.unaccount_wrap .phonenumber_wrap button span {font-size:20px; line-height:1.2em;}
 	.unaccount_wrap .phonenumber_wrap p.error_txt {font-size:18px;}
 
-	.unaccount_wrap .telecoms div.row {padding:40px 0;}
+	.unaccount_wrap .telecoms div.row {align-items:center; gap:0; padding:23px 0 20px 0;}
 	.unaccount_wrap .telecoms div.row strong {min-width:118px; font-size:20px; line-height:1.2em; line-height:unset;}
 	.unaccount_wrap .telecoms div.row div.check_wrap {margin-left:50px;}
 	.unaccount_wrap .telecoms div.row div.check_wrap label {padding-left:44px; font-size:24px;}
@@ -351,7 +354,7 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 	.unaccount_wrap > div.btn button {width:436px; height:96px; border-radius:5px;}
 	.unaccount_wrap > div.btn button strong {font-size:24px;}
 
-	.unaccount_wrap .guide_txt {margin-top:24px; font-size:1em;}
+	.unaccount_wrap .guide_txt {margin-top:60px; font-size:1em;}
 	.unaccount_wrap .guide_txt p + p {margin-top:24px;}
 	.unaccount_wrap .guide_txt p.em {font-weight:500;;}
 }
@@ -648,7 +651,7 @@ table.dataTable tbody td:first-of-type {padding-left:2em; text-align:left;}
 .signTab button.active {background-color:#333;}
 .signTab button.active span {color:#fff;}
 
-.sign_wrap .agree_wrap .row {display:flex; align-items:flex-start; width:100%; padding: 40px 0; gap:10px;}
+.sign_wrap .agree_wrap .row {display:flex; align-items:flex-start;; width:100%; padding:36px 0 12px; gap:10px;}
 .sign_wrap .agree_wrap .row > strong {display:inline-block; min-width:84px; font-size:14px; white-space:nowrap;}
 
 .sign_wrap .agree_wrap .check_all {padding-left:3px;}
@@ -677,7 +680,7 @@ table.dataTable tbody td:first-of-type {padding-left:2em; text-align:left;}
 	.signTab button {height:72px;}
 	.signTab button span {font-size:20px; line-height:1.2em;}
 
-	.sign_wrap .agree_wrap .row {display:flex; align-items:flex-start; width:100%; padding: 40px 0; gap:10px;}
+	.sign_wrap .agree_wrap .row {display:flex; align-items:center; width:100%; padding:20px 0; gap:10px;}
 	.sign_wrap .agree_wrap .row > strong {min-width:118px; font-size:20px; line-height:1.2em;}
 
 	.sign_wrap .agree_wrap .check_all label {height:30px; padding-left:2.75em; line-height:30px;}
