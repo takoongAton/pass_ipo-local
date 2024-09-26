@@ -145,7 +145,7 @@ input[type="number"]::-webkit-inner-spin-button {-webkit-appearance:none; -moz-a
 .passipo_join_wrap .charge_txt {margin:0.625em 0 2.4375em; color:#ff0000; letter-spacing:0; text-align:center;}
 .passipo_join_wrap .charge_txt dt {font-size:0.8125em; line-height:1.46153em;}
 .passipo_join_wrap .charge_txt dt strong {}
-.passipo_join_wrap .charge_txt dd p {font-size:0.9375em; line-height:1.46153em; font-weight:bold;}
+.passipo_join_wrap .charge_txt dd p {font-size:0.875em; line-height:1.46153em; font-weight:bold;}
 
 
 .passipo_join_wrap .terms-agree {margin:1em 0 0 0; padding:0; border:1px solid #ddd; border-radius:5px; overflow:hidden;}
