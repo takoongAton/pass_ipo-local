@@ -275,7 +275,7 @@ input[type="number"]::-webkit-inner-spin-button {-webkit-appearance:none; -moz-a
 	.passipo_join_wrap .signUp_wrap {padding:0 0.8125em;}
 	/* .passipo_join_wrap .signUp_form {margin-top:1em;} */
 
-	
+	.passipo_join_wrap .terms-agree .agree ul {flex-wrap:unset; flex-direction:column;}
 	.passipo_join_wrap ul.radio li {height:50px;}
 	.passipo_join_wrap ul.radio li input + label {border-width:0.09375em; background-size:90px auto; background-size:contain; font-size:inherit; color:transparent;}
 
