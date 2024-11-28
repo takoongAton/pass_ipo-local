@@ -12,171 +12,6 @@
 	
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-
-.customer_form {padding:96px 0 120px;}
-/* 입력폼 */
-.btn_set {width:100%; padding:12px 24px;}
-.btn_default {width:100%; height:72px; background-color:#213DA1; color:#fff;}
-.form_wrap {}
-.form_wrap .row {display:flex; align-items:flex-start; width:100%;}
-.form_wrap .row div.tit {min-width:140px; padding:12px 0;}
-.form_wrap .row div.tit strong {display:flex; align-items:center; height:72px;}
-.form_wrap .row .ipt_form {width:100%;}
-.form_wrap .row .ipt_form .ipt_set {display:flex; justify-content:space-between; align-items:center; width:100%; padding:12px 0; border-bottom:1px solid #ddd;}
-.form_wrap .row .ipt_form .ipt_set > div {flex:1;}
-.form_wrap .row .ipt_form .ipt_set > div p.txt {padding-left:24px; color:#999;}
-.form_wrap .row .ipt_form .ipt_set span.txt {display:inline-block; padding-right:2.5em; font-size:inherit; line-height:1em; font-weight:bold;}
-.form_wrap .row .ipt_form .ipt_set input {width:100%; padding:0 24px; font-size:inherit}
-.form_wrap .row .ipt_form .ipt_set input::placeholder {font-size:1em;}
-.form_wrap .row .ipt_form .ipt_set button {position:relative !important; width:auto; padding:0 2em; border-radius:1px;}
-.form_wrap .row .ipt_form .ipt_set button.btn_address {width:140px; height:72px; background-color:#213DA1; color:#fff; font-size:16px; font-weight:500;}
-
-.form_wrap .row .ipt_form .textarea_set {display:flex; justify-content:space-between; align-items:center; width:100%; padding:12px 0 0;}
-.form_wrap .row .ipt_form .textarea_set > div {flex:1;}
-.form_wrap .row .ipt_form .textarea_set textarea {width:100%; height:280px; padding:24px; border:1px solid #ddd; font-size:inherit; resize:none;}
-.form_wrap .row .ipt_form .textarea_set textarea::placeholder {}
-
-.form_wrap .row .ipt_form span.dash {width:30px; min-width:30px; text-align:center;}
-.form_wrap .row .ipt_form input {border:0 none; line-height:72px;}
-.form_wrap .row .ipt_form input::placeholder {color:#999; font-size:18px; line-height:inherit;}
-.ipt_wrap {display:flex; align-items:center; gap:10px; width:100%;}
-
-.select_set {width:100%; padding:12px 0; border-bottom:1px solid #ddd;}
-.select_set select {position:relative; width:100%; height:72px; padding:0 24px; border:0 none; color:#999; font-size:18px; background:url('../images/ico_arrow_u.png') no-repeat right 24px center / 36px 36px;}
-.select_set select option {background-color:#fff; color:#000;}
-.select_set select.changed {color:#000;}
-.select_set select::before {content:""; display:block; position:absolute; top:0; right:0; width:20px; height:20px; background-color:#ff6600;}
-
-@media screen and (max-width:768px) {
-	.customer_form {padding:30px 0;}
-    .form_wrap .row {flex-direction:column;}
-	.form_wrap .row div.tit {padding-bottom:0;}
-    .form_wrap .row div.tit strong {height:40px; font-size:0.875em;}
-    .form_wrap .row div.tit strong br {display:none;}
-    .form_wrap .row .ipt_form .ipt_set {padding:0;}
-    .form_wrap .row .ipt_form .ipt_set input {padding:0; font-size:0.875em;}
-	.form_wrap .row .ipt_form .ipt_set > div p.txt {padding-left:10px; font-size:0.875em;}
-    .form_wrap .row .ipt_form .ipt_set span.txt {font-size:14px; padding-right:0.85714em;}
-	.form_wrap .row .ipt_form .textarea_set {padding:0;}
-	.form_wrap .row .ipt_form .textarea_set textarea {width:100%; height:240px; padding:10px; font-size:0.875em;}
-    .form_wrap .row .ipt_form input {height:40px;}
-    .form_wrap .row .ipt_form .ipt_set button.btn_address {height:40px; width:auto; padding:0 2em; font-size:14px;}
-    .select_set {padding:0;}
-    .select_set select {height:40px; padding:0; font-size:14px;}
-}
-/* // 입력폼 */
-
-
-/* 입력폼 관련 안내 문구 */
-.form_alert {position:relative; padding:10px 24px;}
-.form_alert p {position:relative; color:#555555; font-size:1em; line-height:1.75em;}
-.form_alert p.em {padding-bottom:0.625em; color:#FF0000;}
-.form_alert p.txt {padding-left:0.6875em;}
-.form_alert p.txt span {position:absolute; top:0; left:0; color:inherit; font-size:inherit; line-height:inherit;}
-.form_alert button.btn_tooltips {display:inline-flex; align-items:center; height:1.5em; color:#999; font-size:16px;}
-.form_alert button.btn_tooltips span {}
-.form_alert button.btn_tooltips span.icon {display:inline-flex; width:24px; height:24px;}
-.form_alert button.btn_tooltips span.icon img {}
-.form_alert button.btn_tooltips span.txt {display:inline-block; color:#999; font-size:16px; line-height:1.5em;}
-
-.layer_tooltips {position:absolute; top:calc(100%); left:24px; width:280px; padding:20px; border:2px solid #707070; background-color:#fff; z-index:1;}
-.layer_tooltips strong {display:block; color:#000; font-size:16px; line-height:24px; font-weight:700;}
-.layer_tooltips p {margin-top:10px; color:#555555; font-size:14px; line-height:24px; font-weight:400; word-break:keep-all;}
-.layer_tooltips button.btn_close {position:absolute; top:20px; right:20px; width:24px; height:24px; overflow:hidden;}
-.layer_tooltips button.btn_close span {color:transparent;}
-.layer_tooltips button.btn_close::before,
-.layer_tooltips button.btn_close::after {content:""; display:block; position: absolute; top:50%; left:50%;; width:80%; height:2px; background-color:#999999;}
-.layer_tooltips button.btn_close::before {transform:translate(-50%,-50%) rotate(-45deg);}
-.layer_tooltips button.btn_close::after {transform:translate(-50%,-50%) rotate(45deg);}
-@media screen and (max-width:768px) {
-	.customer_form {padding:0 20px;}
-    .form_alert {padding:8px 0;}
-    .form_alert p {font-size:0.75em;}
-    .form_alert button.btn_tooltips {font-size:14px;}
-    .form_alert button.btn_tooltips span.icon {width:20px; height:20px;}
-    .form_alert button.btn_tooltips span.txt {font-size:14px; line-height:1.42857em;}
-    
-}
-/* // 입력폼 관련 안내 문구 */
-
-
-/* 입력폼 안내 문구 */
-.box_alert {padding:1.25em 1.5em; background-color:#f5f5f5; font-size:1em;}
-.box_alert div.tit {line-height:1.25em; padding-bottom:0.625em;}
-.box_alert div.tit strong {}
-.box_alert p {line-height:1.75em;}
-.box_alert ul {}
-.box_alert ul li p {position:relative; padding-left:1em; color:#000;}
-.box_alert ul li p::before {content:"·"; position:absolute; top:0; left:0; color:inherit; font-size:inherit; line-height:inherit;}
-.box_alert p.txt a {color:#213DA1; font-size:inherit; font-weight:bold; text-decoration:none;}
-@media screen and (max-width:768px) {
-    .box_alert {font-size:0.875em;}
-}
-/* // 입력폼 안내 문구 */
-
-
-
-
-
-/* 약관 동의 */
-.agree_wrap {margin-top:2em;}
-.agree_wrap div.chk_all {display:flex; align-items:center; gap:0 0.875em; padding:1em 1.5em; border:1px solid #ddd;}
-.agree_wrap div.chk_all button {display:inline-block}
-
-.agree_wrap ul {margin-top:1.25em;}
-.agree_wrap ul + ul {padding-top:1.25em; border-top:1px solid #ddd;}
-.agree_wrap ul li {display:flex; justify-content:space-between; align-items:flex-start; gap:0.625em; width:100%; padding:0.625em 1.5em;}
-.agree_wrap ul li button {min-width:1.75em; width:1.75em; height:1.75em; background:url('../images/ico_arrow_r.png') no-repeat right center / contain; color:transparent; font-size:inherit; white-space:nowrap; text-decoration:underline; overflow:hidden;}
-
-.agree_wrap input[type="text"] {border:1px solid #ddd;}
-.agree_wrap input[type="text"]:optional {background-color: #f7f7f7;} /* 선택옵션 */
-.agree_wrap input[type="text"]:required {background-color: #ff0000;} /* 필수옵션 */
-
-.agree_wrap label {display:inline-block; position:relative; padding-left:2.375em; line-height:1.75em; cursor:pointer;}
-.agree_wrap label input[type="checkbox"] {position:absolute; width:0; height:0; border:0 none; opacity:0;}
-.agree_wrap label input[type="checkbox"] + span.checkmark {content:""; display:inline-block; position:absolute; top:0; left:0; width:1.75em; height:1.75em; background:url('../images/ico_check_on.png') no-repeat left top / contain; border:1px solid #989898; vertical-align:top;}
-.agree_wrap label input[type="checkbox"]:checked + span.checkmark {/* border-color:#242424; */ border:0; background-color: #fff; background-image:url('../images/ico_check_s_on.png')}
-.agree_wrap label em {margin-left:0.25em; color:#ff0000}
-.agree_wrap label span.txt {display:inline-block; line-height:1.75em; word-break:keep-all;}
-
-.agree_wrap li label input[type="checkbox"] + span.checkmark {border:0 none; background-color:#fff;}
-
-.agree_wrap div.chk_all label {padding-left:0;}
-.agree_wrap div.chk_all label input[type="checkbox"] + span.checkmark {position:relative; border-radius:100%;}
-.agree_wrap div.chk_all label input[type="checkbox"]:checked + span.checkmark {background-color:#000; background-image:url('../images/ico_check_on.png')}
-.agree_wrap div.chk_all span.txt {width:28px; height:28px; font-size:20px; line-height:28px; font-weight:bold;}
-
-.agree_wrap li label input[type="checkbox"] + span.checkmark {border-radius:100%;}
-.agree_wrap li label input[type="checkbox"]:checked + span.checkmark {background-color:#fff;}
-
-.agree_wrap .btn_group {margin-top:72px; text-align:center;}
-.agree_wrap .btn_group button {width:284px; height:80px; background-color:#333333; border-radius:5px;}
-.agree_wrap .btn_group button span {display:block; color:#fff; font-size:20px; line-height:29px; font-weight:500;}
-
-
-@media screen and (max-width:768px) {
-    .agree_wrap {font-size:0.875em;}
-    .agree_wrap div.chk_all {padding:1em 1.25em;}
-	.agree_wrap div.chk_all span.txt {font-size:14px;}
-	.agree_wrap div.chk_all label {display:flex; align-items:center; gap:0 10px;}
-	.agree_wrap div.chk_all label input[type="checkbox"] + span.checkmark {width:18px; height:18px;}
-    .agree_wrap ul li {padding:0.625em 0 0.625em 1.25em;}
-
-	.agree_wrap .btn_group {margin-top:30px;}
-	.agree_wrap .btn_group button {width:100%; height:48px; border-radius:4px;}
-	.agree_wrap .btn_group button span {font-size:14px;}
-}
-/* // 약관 동의 /*
-
-
-/* 동의 관련 안내 문구 */
-ol.agree_txt {padding:20px 24px;}
-ol.agree_txt li {}
-ol.agree_txt li p {position:relative; padding-left:1.125em; color:#000; line-height:1.75em; word-break:keep-all; letter-spacing:-0.05em;}
-ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-size:inherit; line-height:inherit;}
-/* // 동의 관련 안내 문구 */
-</style>
 </head>
 
 <body>
@@ -199,8 +34,8 @@ ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-s
 
 	<div class="visual">
 		<div class="visual_txt">
-			<h3>공지사항</h3>
-			<p class="txt">공모주정보 서비스의 다양한 소식을 알려드립니다. </p>
+			<h3>1:1 문의</h3>
+			<!-- <p class="txt">공모주정보 서비스의 다양한 소식을 알려드립니다. </p> -->
 		</div>
 		<div class="bg"></div>
 	</div><!-- // visual -->
@@ -264,19 +99,8 @@ ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-s
 								<div class="ipt_set">
 									<input type="text" placeholder="이메일을 입력하세요.">
 								</div>
-								<!-- <span class="dash">@</span>
-								<div class="ipt_set">
-									<input type="text" placeholder="도메인 선택" readonly="">
-								</div>
-								<div class="select_set">
-									<select name="" id="">
-										<option value="선택해주세요" selected="" disabled="" hidden="">선택해주세요</option>
-										<option value="직접입력">직접입력</option>
-										<option value="naver.com">naver.com</option>
-										<option value="daum.net">daum.net</option>
-									</select>
-								</div> -->
 							</div>
+
 							<div class="form_alert">
 								<p class="em">이메일 형식을 확인해주세요.</p>
 							</div>
@@ -305,8 +129,6 @@ ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-s
 						</div>
 					</div>
 
-					<hr>
-	
 					<!-- <div class="title">
 						<strong>대출약정서 동의 [필수]</strong>
 					</div> -->
@@ -316,54 +138,9 @@ ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-s
 								<input type="checkbox" class="agree all" checked="">
 								<span class="checkmark"></span>
 							</label>
-							<button type="button" class=""><span class="txt">개인정보 수집 및 이용동의</span></button>
+							<button type="button" class="btn_popup"><span class="txt">개인정보 수집 및 이용동의</span></button>
 						</div>
-	
-						<!-- <ul>
-							<li>
-								<label>
-									<input type="checkbox" class="agree item 1" required="">
-									<span class="checkmark"></span>
-									<span class="txt">스탁론 약정서</span>
-								</label>
-								<button type="button" class="btn_popup full"><span>보기</span></button>
-							</li>
-							<li>
-								<label>
-									<input type="checkbox" class="agree item 2" required="">
-									<span class="checkmark"></span>
-									<span class="txt">질권설정계약서 약관</span>
-								</label>
-								<button type="button"><span>보기</span></button>
-							</li>
-							<li>
-								<label>
-									<input type="checkbox" class="agree item 3" required="">
-									<span class="checkmark"></span>
-									<span class="txt">임의처분 및 금융거래정보제공 동의서</span>
-								</label>
-								<button type="button"><span>보기</span></button>
-							</li>
-							<li>
-								<label>
-									<input type="checkbox" class="agree item">
-									<span class="checkmark"></span>
-									<span class="txt">채권약도 및 양도담보 제공 승낙서</span>
-								</label>
-								<button type="button"><span>보기</span></button>
-							</li>
-							<li>
-								<label>
-									<input type="checkbox" class="agree item 4" required="">
-									<span class="checkmark"></span>
-									<span class="txt">자동계좌이체약관</span>
-								</label>
-								<button type="button"><span>보기</span></button>
-							</li>
-						</ul> -->
-	
-						<hr>
-	
+					
 						<div class="btn_group">
 							<div>
 								<button type="button"><span>문의하기</span></button>
@@ -441,23 +218,21 @@ ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-s
 
 
 
-<div class="layer privacy" id="footer_privacy_02_01" style="display:block;">
+<div class="layer privacy" id="" style="display:block;">
 	<div class="inner">
 		<div class="layer_header">
-			<h2>[필수] 고유식별정보처리에 대한 동의</h2>
+			<h2>개인정보 수집 및 이용동의</h2>
 			<button type="button" class="btn_close"><span>닫기</span></button>
 		</div>
 		<div class="layer_content">
 
 			<div class="txt_content">
-				※귀하는 아래 사항에 대해 거부할 권리가 있습니다. 다만 아래 동의 사항은 계약 체결 및 이행을 위하여 필수적이므로, 아래 사항에 동의하셔야만 거래 관계의 설정 또는 유지가 가능합니다.
-
-<strong>주식회사 에이티코넥 귀중</strong>
-
-본인은 주식회사 에이티코넥이 개인정보보호법 제24조에 따라 본인의 개인(신용)정보를 수집·이용, 제공, 조회 시 동의한 목적에 의거 본인의 고유식별정보를 처리하는 것에 동의합니다.
-
- - 고유식별정보 : 주민등록번호, 외국인등록번호, 여권번호, 운전면허 번호
-</div>
+				개인정보 수집 동의 관련 내용이 들어갑니다.<br />
+				내용이 들어갑니다.
+				내용이 들어갑니다.
+				내용이 들어갑니다.
+				체크박스 옆 텍스트 클릭시 팝업 뜸.
+			</div>
 			<!-- // txt_content -->
 
 			<!-- <div class="btn_group">
@@ -500,6 +275,13 @@ if(selectElement.length > 0) {
 	});
 }
 /* // select용 샘플 */
+
+/* 팝업 띄우기 테스트 */
+let btn_layer = document.querySelector(".agree_wrap .btn_popup")
+btn_layer.addEventListener("click", () => {
+	document.querySelector(".layer.privacy").style.display = "block"; /* id값은 변경 가능. */
+})
+/* // 팝업 띄우기 */
 </script>
 
 
