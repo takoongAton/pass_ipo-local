@@ -152,29 +152,35 @@ input[type="number"]::-webkit-inner-spin-button {-webkit-appearance:none; -moz-a
 
 .passipo_join_wrap .terms-agree .all-agree {margin:0; border-bottom:1px solid #ddd; background-color:#fafafa;}
 .passipo_join_wrap .terms-agree .all-agree > div {position:relative;}
-.passipo_join_wrap .terms-agree .all-agree > div label {display:block; position:relative; width:100%; margin:0; color:#111; font-weight:700; line-height:1;}
+.passipo_join_wrap .terms-agree .all-agree > div label {display:flex; gap:10px; position:relative; width:100%; margin:0; color:#111; font-weight:700; line-height:1;}
 .passipo_join_wrap .terms-agree .all-agree > div label * {vertical-align:top;}
 
-.passipo_join_wrap .terms-agree .agree ul {display:flex; flex-wrap:wrap; gap:17px 10px;}
+.passipo_join_wrap .terms-agree .agree ul {display:flex; flex-wrap:wrap; flex-direction:column; gap:6px;}
 /* .passipo_join_wrap .terms-agree .agree ul::after {content:""; display:block; height:0; clear:both;} */
 .passipo_join_wrap .terms-agree .agree li {position:relative; min-width:calc(50% - 5px);}
-.passipo_join_wrap .terms-agree .agree li div {position:relative; line-height:1em;}
+.passipo_join_wrap .terms-agree .agree li div {display:flex; justify-content:space-between; align-items:flex-start; position:relative; gap:10px; line-height:1em; text-align:left;}
+.passipo_join_wrap .terms-agree .agree li div label {display:flex; align-items:flex-start; gap:10px;}
+.passipo_join_wrap .terms-agree .agree li div button {position:relative; width:54px; min-width:54px; line-height:27px;}
+.passipo_join_wrap .terms-agree .agree li div button::after {content:""; display:block; position:absolute; top:50%; right:5px; width:6px; height:6px; border:1px solid #ddd; border-color:transparent #9e9e9e #9e9e9e transparent; transform:translateY(-50%) rotate(-45deg);}
+.passipo_join_wrap .terms-agree .agree li div button span {color:#9e9e9e; font-size:14px;}
 .passipo_join_wrap .terms-agree .agree li div * {vertical-align:top;}
+.passipo_join_wrap .terms-agree .agree li.subChk {padding-left:2em;}
+.passipo_join_wrap .terms-agree .agree li.subChk p.alert_txt {padding-left:calc(1.25em + 10px); color:#ff0000; font-size:13px;}
 
 /* .passipo_join_wrap .terms-agree .agree li:nth-child(2n+1)::after {content:""; display:block; height:0; clear:both;} */
 
 .passipo_join_wrap .terms-agree input[type="checkbox"] {position:absolute; top:0; left:0; width:0; height:0; margin:0; padding:0; border:0; vertical-align:top; opacity:0;}
 .passipo_join_wrap .terms-agree label {display:inline-block; width:auto;}
 
-.passipo_join_wrap .terms-agree input[type="checkbox"] + span.checkmark {display:block; position:absolute; top:0; left:0; width:20px; height:20px; border:1px solid #ccc; background-color:#f2f2f2;}
+.passipo_join_wrap .terms-agree input[type="checkbox"] + span.checkmark {display:block; /* position:absolute; top:0; left:0; */ width:20px; height:20px; border:1px solid #ccc; background-color:#f2f2f2;}
 .passipo_join_wrap .terms-agree input[type="checkbox"]:checked + span.checkmark {border:none; background-color:#2677ff; background-image:url('../images/check_gtype.png'); background-repeat:no-repeat; background-position:center; background-size:contain;}
 .passipo_join_wrap .terms-agree input[type="checkbox"]::after {display:none !important;}
 
 .passipo_join_wrap .terms-agree .all-agree input[type="checkbox"] + span.checkmark {top:auto; left:auto; width:21px; height:21px; border-radius:2px;}
-.passipo_join_wrap .terms-agree .all-agree span.txt {display:inline-block; padding-left:1.83333em; color:#000; line-height:21px; font-size:1.125em;}
+.passipo_join_wrap .terms-agree .all-agree span.txt {display:inline-block; color:#000; line-height:21px; font-size:1.125em;}
 
 .passipo_join_wrap .terms-agree .agree input[type="checkbox"] + span.checkmark {width:17px; height:17px; border-radius:2px;}
-.passipo_join_wrap .terms-agree .agree label ~ span.txt {display:inline-block; margin-left:23px; font-size:14px; line-height:17px; color:#888; cursor:pointer;}
+.passipo_join_wrap .terms-agree .agree label span.txt {display:inline-block; font-size:14px; line-height:17px; color:#888; cursor:pointer;}
 
 .passipo_join_wrap input[type="checkbox"] + label {display:block; top:auto; width:auto; margin:0; padding:0;}
 .passipo_join_wrap input[type="number"],.passipo_join_wrap input[type="tel"],.passipo_join_wrap input[type="text"],.passipo_join_wrap input[type="password"],.passipo_join_wrap input[type="email"],.passipo_join_wrap input[type="search"],.passipo_join_wrap select {height:auto; margin:0; }
@@ -284,7 +290,7 @@ input[type="number"]::-webkit-inner-spin-button {-webkit-appearance:none; -moz-a
 	.passipo_join_wrap .terms-agree .all-agree > div label {display:flex; align-items:center; height:50px; padding-left:16px; font-size:1.25em;}
 	.passipo_join_wrap .terms-agree .agree {padding:1em 1em 1em 1em;}
 	/* .passipo_join_wrap .terms-agree .agree li:nth-child(2) ~ li {margin-top:15px;} */
-	.passipo_join_wrap .terms-agree .all-agree span.txt {display:block; padding-left:1.8em; font-size:0.78125em; line-height:1.24em;}
+	.passipo_join_wrap .terms-agree .all-agree span.txt {display:block; font-size:0.78125em; line-height:1.24em;}
 
 	.passipo_join_wrap .terms-agree .agree input[type="checkbox"] + span.checkmark {width:1em; height:1em;}
 	.passipo_join_wrap .terms-agree .agree label ~ span.txt {display:inline-block; margin:0; padding-left:1.7em; color:#888; font-size:0.8125em; line-height:1.2em;}
