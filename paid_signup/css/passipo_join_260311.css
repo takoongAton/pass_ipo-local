@@ -346,6 +346,7 @@ input[type="number"]::-webkit-inner-spin-button {-webkit-appearance:none; -moz-a
 .passipo_join_wrap .signUp_success_wrap .signUp_success_section .signUp_success_txt .item ol li span {display:inline-block; position:absolute; top:0; left:0; width:18px; height:18px; border-radius:100%; text-align:center; line-height:inherit; background-color:#ddd; color:#fff;}
 
 .passipo_join_wrap .signUp_success_wrap .signUp_success_section .signUp_success_info div.tit {color:#aaa; font-size:13px;}
+.passipo_join_wrap .signUp_success_wrap .signUp_success_section .signUp_success_info div.tit p {padding-bottom:20px; color:#222; font-size:14px;}
 .passipo_join_wrap .signUp_success_wrap .signUp_success_section .signUp_success_info dl dt span {display:block; margin:0.13636em 0 0.4em; color:#222; font-weight:700; font-size:1.40625em; line-height:1.46666;}
 .passipo_join_wrap .signUp_success_wrap .signUp_success_section .signUp_success_info dl dd p {color:#aaa; font-size:12px; line-height:1.5;}
 
